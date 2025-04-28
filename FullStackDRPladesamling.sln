@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullStackDRPladesamling", "FullStackDRPladesamling\FullStackDRPladesamling.csproj", "{68ECA04B-1CB1-4D90-8E8E-A8FF30858307}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTDRPladesamling", "FullStackDRPladesamling\RESTDRPladesamling.csproj", "{68ECA04B-1CB1-4D90-8E8E-A8FF30858307}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
