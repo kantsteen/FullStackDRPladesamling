@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RESTDRPladesamling.Model;
 using RESTDRPladesamling.Repo;
+using System.Reflection.Metadata.Ecma335;
 
 namespace RESTDRPladesamling.Controllers
 {
@@ -16,9 +18,26 @@ namespace RESTDRPladesamling.Controllers
             repo = _recordRepo;
         }
         // GET: RecordController2
+
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+
+        [HttpGet]
         public ActionResult GetAll()
         {
-            
+            IEnumerable<Record> result = _recordRepo.GetAll();
+
+            if (result.Any())
+            {
+                return Ok(result);
+            }
+            else
+            {
+                return NoContent();
+
+            }
+
         }
 
         //// GET: RecordController2/Details/5
