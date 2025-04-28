@@ -15,7 +15,7 @@ namespace RESTDRPladesamling.Controllers
 
         public RecordController(RecordRepo repo)
         {
-            repo = _recordRepo;
+            _recordRepo = repo;
         }
         // GET: RecordController2
 
@@ -26,7 +26,7 @@ namespace RESTDRPladesamling.Controllers
         [HttpGet]
         public ActionResult GetAll()
         {
-            IEnumerable<Record> result = _recordRepo.GetAll();
+            IEnumerable<Record?> result = _recordRepo.GetAll();
 
             if (result.Any())
             {

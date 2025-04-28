@@ -13,8 +13,6 @@ namespace RESTDRPladesamling.Repo.Tests
    
 
     [TestClass()]
-
-    
     public class RecordRepoTests
     {
         private RecordRepo _repo;

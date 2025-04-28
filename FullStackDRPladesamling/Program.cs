@@ -1,4 +1,7 @@
 
+using RESTDRPladesamling.Model;
+using RESTDRPladesamling.Repo;
+
 namespace FullStackDRPladesamling
 {
     public class Program
@@ -11,6 +14,8 @@ namespace FullStackDRPladesamling
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            builder.Services.AddSingleton<RecordRepo>(new RecordRepo());
+            builder.Services.AddScoped<RecordRepo>();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
