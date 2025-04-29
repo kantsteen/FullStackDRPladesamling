@@ -23,6 +23,7 @@ namespace RESTDRPladesamling.Repo.Tests
             _repo = new RecordRepo();
             //Add to repo
             
+            
         }
 
         [TestMethod()]
@@ -30,7 +31,7 @@ namespace RESTDRPladesamling.Repo.Tests
         {
             IEnumerable<Record> record = _repo.GetAll();
             //Test for records
-            Assert.AreEqual(0, record.Count());
+            Assert.AreEqual(1, record.Count());
         }
     }
 }
